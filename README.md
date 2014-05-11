@@ -7,3 +7,15 @@ This is a sample application that is using a handful of technologies & patterns 
 * [Slick](http://slick.typesafe.com/)
 * [Cake Pattern for Dependency Injection](http://jonasboner.com/2008/10/06/real-world-scala-dependency-injection-di/)
 * [MySQL](http://www.mysql.com/)
+
+#### Get Started
+
+Start the app:
+
+    sbt
+    ~ re-start
+    
+Navigate to the following URLs:
+
+   http://localhost
+   http://localhost/invoices
