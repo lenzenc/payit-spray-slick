@@ -1,8 +1,11 @@
 package com.payit.services
 
 import com.payit.models.Invoice
+import com.payit.daos.InvoiceDAOModule
+import com.payit.Profile
 
 trait InvoiceServiceModule {
+  self: InvoiceDAOModule =>
 
   val invoiceService = new InvoiceServiceImpl
 

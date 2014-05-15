@@ -8,10 +8,6 @@ trait InvoiceDAOModule { this: Profile =>
 
   val invoiceDAO = new InvoiceDAOImpl
 
-  // You should not normally do this but it is being done just for this demo application to make it available to a
-  // database seed function.
-  val invoices = TableQuery[Invoices]
-
   class Invoices(tag: Tag) extends Table[Invoice](tag, "Invoices") {
     def id = column[Option[Long]]("id", O.PrimaryKey, O.AutoInc)
     def invoiceNumber = column[String]("invoice_number", O.NotNull)
@@ -20,6 +16,10 @@ trait InvoiceDAOModule { this: Profile =>
   }
 
   trait InvoiceDAO {
+
+    // You should not normally do this but it is being done just for this demo application to make it available to a
+    // database seed function.
+    val invoices = TableQuery[Invoices]
 
     def findAll: List[Invoice]
 
